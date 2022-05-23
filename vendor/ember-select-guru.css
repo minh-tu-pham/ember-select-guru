@@ -1,7 +1,7 @@
 .ember-select-guru {
     position: relative;
     min-height: 35px;
-    z-index: 9000;
+    z-index: 900;
 }
 
 .ember-select-guru__container {
@@ -68,6 +68,10 @@
 
 .ember-select-guru__option.is-active {
     background: #f1efef;
+}
+
+.ember-select-guru__expanded {
+    z-index: 999;
 }
 
 .multi-value__option {

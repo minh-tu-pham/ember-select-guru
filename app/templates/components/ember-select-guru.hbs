@@ -16,7 +16,7 @@
   </div>
 
   {{#if isExpanded}}
-    {{#ember-select-dropdown name=name visible=isExpanded willHideDropdown="willHideDropdown" as |optionsList|}}
+    {{#ember-select-dropdown name=name visible=isExpanded multiple=multiple willHideDropdown="willHideDropdown" as |optionsList|}}
       <div class='ember-select-guru__search-wrapper'>
         {{input placeholder=searchPlaceholder value=queryTerm class='ember-select-guru__search'}}
       </div>

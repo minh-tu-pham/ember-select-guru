@@ -9,7 +9,7 @@ module.exports = function(defaults) {
   });
 
   // load sinon for test spies
-  app.import('bower_components/sinon/index.js');
+  app.import('node_modules/ember-sinon/index.js');
 
   return app.toTree();
 };

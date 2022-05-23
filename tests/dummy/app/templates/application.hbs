@@ -1,4 +1,4 @@
-<a href="https://github.com/netguru/ember-select-guru"><img style="z-index:9999; position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+<a href="https://github.com/netguru/ember-select-guru"><img style="z-index:999; position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 <div class='container-fluid'>
   <div class='row'>
     <div class='sidebar'>
@@ -140,7 +140,7 @@
           <h2><code>searchKey</code> property</h2>
         </div>
         <div class="col-md-4">
-          <p>You can easily change the attribute used for searching. Try typing "fifty" into the field below.</p>
+          <p><b>ember-select-guru</b> is searching through <code>name</code> property in <b>case-insensitive</b> way by default. You can easily change the attribute used for searching. Try typing "fifty" into the field below.</p>
 
           {{ember-select-guru
           value=singleValue
@@ -175,7 +175,8 @@
               options=options
               <strong>searchKey='description'</strong>
               onSelect=(action "onSelectEvent")}}
-          {{/ember-highlight-code}}
+            {{/ember-highlight-code}}
+          <p>But if you want to search in case-sensitive or any other way, check out following <b>custom search</b> section.</p>
         </div>
       </div>
       <hr>

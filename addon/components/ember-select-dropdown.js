@@ -30,7 +30,10 @@ export default Ember.Component.extend({
        (this.$('input.ember-select-guru__search')[0] === event.target)) {
       return;
     } else {
-      run(() => { this._willHideDropdown(); });
+      if(!this.get('multiple') || !$(event.target).hasClass("ember-select-guru__option")){
+        run(() => { this._willHideDropdown(); });
+      }
+      return;
     }
   },
 

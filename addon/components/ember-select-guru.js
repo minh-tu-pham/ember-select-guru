@@ -21,6 +21,7 @@ export default Component.extend({
   multiValueComponent: 'multi-value-component',
   searchKey: 'name',
   classNames: 'ember-select-guru',
+  classNameBindings: ['isExpanded:ember-select-guru__expanded'],
   hasOptions: computed.notEmpty('_options'),
   hasValue: computed.notEmpty('value'),
   queryTermObserver: observer('queryTerm', function() {
@@ -115,9 +116,10 @@ export default Component.extend({
         this.decrementProperty('currentHighlight');
         return;
       case 13:
+        event.preventDefault();
         const option = this.get('_options')[this.get('currentHighlight')];
         if(option) { this.send('onOptionClick', option); }
-        this.set('isExpanded', false);
+        if(!this.get('multiple')) { this.set('isExpanded', false); }
         return;
       default:
         return;
@@ -135,11 +137,11 @@ export default Component.extend({
     this.set('_options', possibleOptions);
   },
   _searchForOptions() {
-    const term = this.get('queryTerm');
+    const term = this.get('queryTerm').toLowerCase();
     const searchKey = this.get('searchKey');
 
     return this.get('_options').filter((item) => {
-      return (get(item, searchKey) && (get(item, searchKey).indexOf(term) > -1));
+      return (get(item, searchKey) && (get(item, searchKey).toLowerCase().indexOf(term) > -1));
     });
   }
 });

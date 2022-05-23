@@ -1,6 +1,6 @@
 {
   "name": "ember-select-guru",
-  "version": "1.0.1",
+  "version": "1.1.2",
   "description": "Native emberjs select component inspired by Select2. Features include single, multiple, remote selection and others.",
   "directories": {
     "doc": "doc",
@@ -13,7 +13,8 @@
   },
   "repository": "https://netguru.github.io/ember-select-guru/",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 0.10.0",
+    "yarn": ">= 1.0.0"
   },
   "author": "Jakub Niechcial",
   "contributors": [
@@ -25,26 +26,26 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "broccoli-asset-rev": "^2.1.2",
-    "ember-cli": "1.13.8",
-    "ember-cli-app-version": "0.5.0",
-    "ember-cli-bootstrap-sassy": "0.0.18",
-    "ember-cli-dependency-checker": "^1.0.1",
-    "ember-cli-htmlbars": "0.7.9",
-    "ember-cli-htmlbars-inline-precompile": "^0.2.0",
-    "ember-cli-ic-ajax": "0.2.1",
-    "ember-cli-inject-live-reload": "^1.3.1",
-    "ember-cli-qunit": "^1.0.0",
-    "ember-cli-release": "0.2.3",
-    "ember-cli-sass": "5.0.1",
-    "ember-cli-sri": "^1.0.3",
-    "ember-cli-uglify": "^1.2.0",
-    "ember-data": "1.13.8",
+    "broccoli-asset-rev": "^3.0.0",
+    "ember-cli": "3.20.0",
+    "ember-cli-app-version": "3.2.0",
+    "ember-cli-bootstrap-sassy": "0.5.8",
+    "ember-cli-dependency-checker": "^3.2.0",
+    "ember-cli-htmlbars": "5.3.1",
+    "ember-cli-ic-ajax": "1.0.0",
+    "ember-cli-inject-live-reload": "^2.0.2",
+    "ember-cli-qunit": "^4.4.0",
+    "ember-cli-release": "1.0.0-beta.2",
+    "ember-cli-sass": "10.0.1",
+    "ember-cli-sri": "^2.1.1",
+    "ember-cli-uglify": "^3.0.0",
+    "ember-data": "3.20.0",
     "ember-disable-prototype-extensions": "^1.0.0",
     "ember-disable-proxy-controllers": "^1.0.0",
-    "ember-export-application-global": "^1.0.3",
-    "ember-highlight-code": "0.0.8",
-    "ember-try": "0.0.6"
+    "ember-export-application-global": "^2.0.1",
+    "ember-try": "1.4.0",
+    "node-sass": "^4.14.1",
+    "sass": "^1.26.10"
   },
   "keywords": [
     "ember-addon",
@@ -52,7 +53,18 @@
     "select2"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.3"
+    "bootstrap-sass": "~3.4.1",
+    "ember-cli-babel": "^7.22.1",
+    "ember-cli-shims": "^1.2.0",
+    "ember-cli-test-loader": "^3.0.0",
+    "ember-load-initializers": "^2.1.1",
+    "ember-resolver": "~8.0.2",
+    "ember-sinon": "^5.0.0",
+    "ember-source": "^3.20.4",
+    "fast-sourcemap-concat": "^2.1.0",
+    "jquery": "^3.5.1",
+    "loader.js": "ember-cli/loader.js#3.2.1",
+    "lodash": "^4.17.20"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
